@@ -5,13 +5,7 @@ from hermes_python.hermes import Hermes
 
 
 def action_wrapper(hermes, intent_message):
-    first = int(intent_message.slots.firstTerm.first().value)
-    second = int(intent_message.slots.secondTerm.first().value)
-    calc = first + second
-    if str(calc)[-2:] == ".0":
-        calc = int(calc)
-    result_sentence = "{} plus {} ergibt {} .".format(first, second, calc)
-
+    result_sentence = "Lampe wird eingeschaltet"
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 

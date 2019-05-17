@@ -9,7 +9,6 @@ def action_wrapper(hermes, intent_message):
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 
-
 if __name__ == "__main__":
     with Hermes("localhost:1883") as h:
-        h.subscribe_intent("domi:getAddition", action_wrapper).start()
+        h.subscribe_intent("FrankBroeker:lightOffIntent", action_wrapper).start()

@@ -6,6 +6,8 @@ VENV=venv
 if [ -f "$PYTHON" ]
 then
 
+
+
     if [ ! -d $VENV ]
     then
         # Create a virtual environment if it doesn't exist.
